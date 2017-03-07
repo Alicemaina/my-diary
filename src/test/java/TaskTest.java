@@ -65,6 +65,31 @@ public class TaskTest {
     assertEquals(true, Task.all().get(1).equals(secondTask));
   }
 
+  @Test 
+  public void save_assignsIdToObject() {
+    Task task = new Task("Java", "description", "moringa");
+    task.save();
+    Task saveTask = Task.all().get(0);
+    assertEquals(task.getId(), saveTask.getId());
+  }
 
+  @Test
+  public void find_returnTaskWithSameId_secondTask() {
+    Task firstTask = new Task("Java", "description", "moringa");
+    firstTask.save();
+    Task secondTask = new Task("Ruby", "description", "moringa");
+    secondTask.save();
+    assertEquals(Task.find(secondTask.getId()), secondTask);
+
+  }
+
+  @Test
+  public void setName_updateNameAppropriately_true() {
+    // String expectedOutput = "Java";
+    Task task = new Task ("Java", "description", "moringa");
+    task.save();
+    // task.update(expectedOutput);
+    task.update("Ruby", "description", "moringa");
+    assertEquals("Ruby", "description", "moringa", Task.find(task.getId()).getName());
+  }
 }
-

@@ -10,6 +10,7 @@ public class Task {
 	private String name;
 	private String location;
 	private String description;
+	private int id;
 	private Timestamp time;
 
 
@@ -17,6 +18,7 @@ public class Task {
 		this.name = name;
 		this.description = description;
 		this.location = location;
+		this.id = id;
 		time = new Timestamp(new Date().getTime());
 
 	}
@@ -31,6 +33,10 @@ public class Task {
 
 	public String getLocation() {
 		return location;
+	}
+
+	public int getId() {
+		return id;
 	}
 
 	// public String getTime(){
@@ -56,11 +62,12 @@ public class Task {
 	public void save() {
 		try(Connection con = DB.sql2o.open()) {
 			String sql = "INSERT INTO tasks (name, description, location) VALUES (:name, :description, :location)";
-			con.createQuery(sql)
+			this.id = (int) con.createQuery(sql, true)
 			.addParameter("name", this.name)
 			.addParameter("description", this.description)
 			.addParameter("location", this.location)
-			.executeUpdate();
+			.executeUpdate()
+			.getKey();
 		}
 	}
 
@@ -69,6 +76,36 @@ public class Task {
 		String sql = "SELECT * FROM tasks";
 		try(Connection con = DB.sql2o.open()) {
 			return con.createQuery(sql).executeAndFetch(Task.class);
+		}
+	}
+
+	public static Task find(int id) {
+		try(Connection con = DB.sql2o.open()) {
+			String sql = "SELECT * FROM persons where id=:id";
+			Task task = con.createQuery(sql)
+			.addParameter("id", id)
+			.executeAndFetchFirst(Task.class);
+			return task;
+		}
+	}
+
+	public void update(String name, String location, String description){
+		try(Connection con = DB.sql2o.open()){
+			String sql = "UPDATE task SET name = :name, description = :description, location = :location, WHERE id =:id";
+			con.createQuery(sql)
+			.addParameter("name", this.name)
+			.addParameter("description", this.description)
+			.addParameter("location", this.location)
+			.addParameter("id", this.id)
+			.executeUpdate();
+		}
+	}
+
+	public void delete() {
+		try(Connection con = DB.sql2o.open()) {
+			con.createQuery("DELETE FROM tasks WHER id = :id")
+			.addParameter("id",id)
+			.executeUpdate();
 		}
 	}
 
