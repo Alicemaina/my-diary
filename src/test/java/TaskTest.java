@@ -35,13 +35,36 @@ public class TaskTest {
   	Task task = new Task("Java", "description", "moringa");
   	assertEquals("moringa", task.getLocation());
   }
+
+  // equals
   
-  @Test 
-  public void equals_returnTrueIfNameAndDescriptionAreSame_true() {
-  	Task firstTask = new Task("Java", "description", "moringa");
-  	Task anotherTask = new Task("Java", "description", "moringa");
-  	assertTrue(firstTask.equals(anotherTask));
-  }
+  
+
+  @Test
+  public void equals_FalseIfAttributesAreDifferent_false() {
+    Task firstTask = new Task("Java", "description", "moringa");
+    Task anotherTask = new Task("Java", "description", "moringa");
+    assertTrue(firstTask.equals(anotherTask));
+
   }
 
+  @Test 
+  public void save_instartsObjectIntoDatabase_Task() {
+    Task task = new Task("Java", "description", "moringa");
+    task.save();
+    assertTrue(Task.all().get(0).equals(task));
+  }
+
+  @Test
+  public void all_returnAllInstancesOfTask_true() {
+    Task firstTask = new Task("Java", "description", "moringa");
+    firstTask.save();
+    Task secondTask = new Task("ruby", "description", "moringa");
+    secondTask.save();
+    assertEquals(true, Task.all().get(0).equals(firstTask));
+    assertEquals(true, Task.all().get(1).equals(secondTask));
+  }
+
+
 }
+
