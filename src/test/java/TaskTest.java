@@ -90,6 +90,6 @@ public class TaskTest {
     task.save();
     // task.update(expectedOutput);
     task.update("Ruby", "description", "moringa");
-    assertEquals("Ruby", "description", "moringa", Task.find(task.getId()).getName());
+    assertEquals("Ruby", Task.find(task.getId()).getName());
   }
 }

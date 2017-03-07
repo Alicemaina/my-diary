@@ -81,7 +81,7 @@ public class Task {
 
 	public static Task find(int id) {
 		try(Connection con = DB.sql2o.open()) {
-			String sql = "SELECT * FROM persons where id=:id";
+			String sql = "SELECT * FROM tasks where id=:id";
 			Task task = con.createQuery(sql)
 			.addParameter("id", id)
 			.executeAndFetchFirst(Task.class);
@@ -91,12 +91,12 @@ public class Task {
 
 	public void update(String name, String location, String description){
 		try(Connection con = DB.sql2o.open()){
-			String sql = "UPDATE task SET name = :name, description = :description, location = :location, WHERE id =:id";
+			String sql = "UPDATE tasks SET name = :name, description = :description, location = :location WHERE id = :id";
 			con.createQuery(sql)
 			.addParameter("name", this.name)
 			.addParameter("description", this.description)
 			.addParameter("location", this.location)
-			.addParameter("id", this.id)
+			.addParameter("id", id)
 			.executeUpdate();
 		}
 	}
