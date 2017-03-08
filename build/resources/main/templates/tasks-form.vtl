@@ -1,0 +1,77 @@
+<div class="bigBox">
+
+<p id="create-event"><strong>Create your Event</strong></p>
+
+   <div class="col-md-6">
+
+   <div class="box"> 
+    <div class="form-group">    
+      <form action="/tasks" method="post">
+
+        <div>
+            <label for="name">Name</label>
+        </div>
+
+        <div>
+            <input type="text" name="name" 
+            placeholder="Enter the name of the event" 
+            class="form-control">
+        </div>     
+
+        <div>
+            <label for="description">Event Description</label>
+        </div>
+
+        <div>
+            <input type="text" name="description" 
+            placeholder="Description of the task" 
+            class="form-control">
+        </div> 
+
+        <div>
+            <label for="location">location/label>
+        </div>
+
+        <div>
+            <input type="text" name="location" 
+            placeholder="Where your task will happen" 
+            class="form-control">
+        </div>   
+    
+    <br>
+
+        <div>
+            <button type="submit" 
+            class="btn btn-default">Done</button>
+        </div>
+    </form>
+    </div>
+  </div>
+  </div>
+
+  
+  
+
+    <div class="col-md-6">
+    <div class="box">
+      <p id="event-statements">You created this Event on (getDate)</p>
+
+      <table class="table" >
+        <thead>
+            <tr>
+                <th>Event</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+           <!--  #foreach($task in $task.getTasks())
+                <tr>
+                    <td>$client.getName()</td>
+                </tr>
+            #end -->
+        </tbody>
+      </table>
+      
+     </div>
+    </div>
+</div>
