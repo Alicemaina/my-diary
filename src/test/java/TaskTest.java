@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 import org.sql2o.*;
 import org.junit.*;
+import java.sql.Timestamp;
+import java.util.Date;
 import static org.junit.Assert.*;
 
 
@@ -83,13 +85,21 @@ public class TaskTest {
 
   }
 
-  @Test
-  public void setName_updateNameAppropriately_true() {
-    // String expectedOutput = "Java";
-    Task task = new Task ("Java", "description", "moringa");
-    task.save();
-    // task.update(expectedOutput);
-    task.update("Ruby", "description", "moringa");
-    assertEquals("Ruby", Task.find(task.getId()).getName());
-  }
+  // @Test
+//   public void setName_updateNameAppropriately_true() {
+//     // String expectedOutput = "Java";
+//     Task task = new Task ("Java", "description", "moringa");
+//     task.save();
+//     // task.update(expectedOutput);
+//     task.update("Ruby", "description", "moringa");
+//     assertEquals("Ruby", Task.find(task.getId()).getName());
+//   }
+
+// //   @Test 
+// //   public void save_recordsTimeOfCreatinInDatabase() {
+// //     Task task = new Task("Java", "description", "moringa");
+// //     task.save();
+// //     Timestamp savedTaskWhen = task.find(task.getId()).getwhen();
+    
+// //   }
 }

@@ -2,24 +2,24 @@ import java.util.List;
 import org.sql2o.*;
 import java.sql.Timestamp;
 import java.util.Date;
-// import org.joda.time.format.DateTimeFormat;
 import java.text.SimpleDateFormat;
-// import org.apache.spark.sql.functions;
 
 public class Task {
 	private String name;
 	private String location;
 	private String description;
 	private int id;
-	private Timestamp time;
+	// private Timestamp startingDate;
+	// private Timestamp what;
+	// private Timestamp endingDate;
+	// private Timestamp at;
 
 
 	public Task(String name, String description, String location) {
 		this.name = name;
 		this.description = description;
 		this.location = location;
-		this.id = id;
-		time = new Timestamp(new Date().getTime());
+		// time = new Timestamp(new Date().getTime());
 
 	}
 
@@ -37,14 +37,24 @@ public class Task {
 
 	public int getId() {
 		return id;
-	}
+	// }
 
-	// public String getTime(){
- //    String pattern = "MM/dd/yyyy HH:mm:ss";
- //    SimpleDateFormat format = new SimpleDateFormat(pattern);
- //    System.out.println("Output: " + time);
- //    return format.format(time);
- //  }  time needed looking for best way to constact init
+	// public Timestamp getStartingDate(){
+	// 	return startingDate;
+	// }
+
+	// public Timestamp getWhat() {
+ //        return what;
+ //    }
+
+ //    public Timestamp getEndingDate(){
+	// 	return endingDate;
+	// }
+
+	// public Timestamp getat() {
+ //        return at;
+    }
+   
 
 	@Override 
 	public boolean equals(Object otherTask) {
@@ -96,7 +106,6 @@ public class Task {
 			.addParameter("name", this.name)
 			.addParameter("description", this.description)
 			.addParameter("location", this.location)
-			.addParameter("id", id)
 			.executeUpdate();
 		}
 	}
@@ -109,5 +118,8 @@ public class Task {
 		}
 	}
 
-
+    // public String getFormattedDate(){
+    //     SimpleDateFormat formatter = new SimpleDateFormat("EEE, MMM dd yyyy hh:mm a");
+    //     return formatter.format(date);
+    // }
 }
