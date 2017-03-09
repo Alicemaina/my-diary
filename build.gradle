@@ -12,9 +12,9 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-archivesBasedName = 'my-diary'
+archivesBaseName = "my-diary"
 version ='1.0'
-applicationName = 'my-diary'
+applicationName = "my-diary"
 mainClassName = 'App'
 
 // In this section you declare where to find the dependencies of your project
@@ -39,7 +39,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 defaultTasks = ['claen']
-task stage(dependsOn; ['clean', 'installApp'])
+task stage(dependsOn: ['clean', 'installDist'])
 
 
 
