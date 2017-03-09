@@ -10,9 +10,16 @@
 
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
+apply plugin: 'application'
+
+archivesBasedName = 'my-diary'
+version ='1.0'
+applicationName = 'my-diary'
+mainClassName = 'App'
 
 // In this section you declare where to find the dependencies of your project
 repositories {
+    mavenCentral()
     // Use 'jcenter' for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
@@ -31,6 +38,8 @@ dependencies {
     // Use JUnit test framework
     testCompile 'junit:junit:4.12'
 }
+defaultTasks = ['claen']
+task stage(dependsOn; ['clean', 'installApp'])
 
 
 

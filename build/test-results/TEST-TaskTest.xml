@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TaskTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2017-03-09T08:25:29" hostname="alice-HP-EliteBook-8460p" time="0.497">
+  <properties/>
+  <testcase name="equals_returnsTrueIfAllReturn_true" classname="TaskTest" time="0.148"/>
+  <testcase name="getLocation_instantiatesWithName_location" classname="TaskTest" time="0.008"/>
+  <testcase name="save_recordsTimeOfCreationInDatabase" classname="TaskTest" time="0.082"/>
+  <testcase name="getName_instantiatesWithName_name" classname="TaskTest" time="0.008"/>
+  <testcase name="update_updatesName_true" classname="TaskTest" time="0.056"/>
+  <testcase name="save_insertsObjectToDB_Task" classname="TaskTest" time="0.032"/>
+  <testcase name="delete_deletesName_true" classname="TaskTest" time="0.034"/>
+  <testcase name="save_assignsId" classname="TaskTest" time="0.032"/>
+  <testcase name="find_returnsTaskWithSameId_secondTask" classname="TaskTest" time="0.04"/>
+  <testcase name="Task_instantiatesCorrectly_true" classname="TaskTest" time="0.004"/>
+  <testcase name="all_returnsAllInstances" classname="TaskTest" time="0.036"/>
+  <testcase name="getDescription_instantiatesWithName_description" classname="TaskTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
