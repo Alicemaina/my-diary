@@ -1,1 +1,1 @@
-web: ./build/install/mydiary/bin/mydiary
+web: ./build/install/my-diary/bin/my-diary
