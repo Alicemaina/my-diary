@@ -1,0 +1,104 @@
+ <p id="create-event"><strong>Create Your Event</strong></p>
+   
+   <div class="intro-box">
+    <div id="intro">
+       <p id="title"><span>Welcome to the FREE online diary</span></p>  
+
+       <hr>
+
+       <p>
+       Everyone can have their own personal online diary or journal on the Internet - it's free at my-diary.org! We will host your journal online at no cost. Go ahead and create your own private or public diary today. If you have any suggestions or problems with this Internet diary, please let us know.
+       </p>    
+    </div>
+   </div>
+
+   <div class="col-md-6" id="login">
+
+   <div class="box"> 
+    <div class="form-group"> 
+
+        <form action="/tasks" method="post">
+
+        <div>
+            <label for="name">Name</label>
+        </div>
+
+        <div>
+            <input type="text" name="name" 
+            placeholder="Enter the name of the event" 
+            class="form-control">
+        </div>     
+
+        <div>
+            <label for="description">Event Description</label>
+        </div>
+
+        <div>
+            <input type="text" name="description" 
+            placeholder="Description of the task" 
+            class="form-control">
+        </div> 
+
+        <div>
+            <label for="location">Location</label>
+        </div>
+
+        <div>
+            <input type="text" name="location" id="username" 
+            placeholder="Where will you task happen?" 
+            class="form-control"/>
+        </div>   
+    
+        <br>
+
+        <div>
+            <input type="submit" id="login-btn" value="Done" />
+        </div>
+        </form>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6" id="login">
+    <div class="box">
+        <p id="event-statements">Your Events</p>
+     <table class="table">
+        <thead>
+            
+                <th>Event</th>
+                <th>Description</th>
+
+                <div>
+                    <th>Location</th>
+                </div>
+
+                <div>
+                    <th>Start Time</th>
+                </div>
+
+                <div>
+                    <th>End Time</th>
+                </div>
+            
+        </thead>    
+        <tbody>
+            #if($tasks)
+                #foreach($task in $tasks)
+                    <tr>
+                        <td>$task.getName()</td>
+                        <td>$task.getDescription()</td>
+                        <td>$task.getLocation()</td>
+                    </tr>
+                #end
+            #else
+                <tr>
+                    <th colspan="3" class="text-danger text-center">You have not yet created Events. Create a new event
+                    </th>
+                </tr>
+            #end
+        </tbody>
+     </table>
+   </div>
+  </div>
+
+
