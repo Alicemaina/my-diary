@@ -11,11 +11,10 @@ public class App {
 
     get("/", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      
       model.put("view", "templates/index.vtl");
-
+      // model.put("my-diary", my-diary.all());
       return new ModelAndView(model, layout);
-    },new VelocityTemplateEngine());
+    }, new VelocityTemplateEngine());
 
     get("/tasks/new", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
@@ -50,4 +49,5 @@ public class App {
 
   } 
 
+>>>>>>> jo
 }

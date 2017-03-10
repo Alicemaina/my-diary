@@ -1,3 +1,256 @@
+<<<<<<< HEAD
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+html, body, .section1{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-image: url('../images/bg1.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+}
+
+
+.icon{
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  left: 2em;
+  top: 2em;
+}
+
+
+
+
+.header{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20;
+  text-align: right;
+  position: absolute;
+  bottom: 4em;
+  right: 2em;
+  color: whitesmoke;
+
+}
+
+#section2 {
+  background-color: black;
+  opacity: 0.5;
+  margin-bottom: 2%;
+  margin-left: -4%;
+
+}
+
+#section2 h1 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 400;
+  color: whitesmoke;
+}
+
+
+#section2 p{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  color: whitesmoke;
+}
+/*
+p:hover, #section2{
+  background-color: black;
+}
+
+p:ctive, #section2{
+  background-color: black;
+}*/
+
+
+
+#section3{
+  /*height: 0px;*/
+  width=100%;
+  margin-left: -8px;
+}
+
+html {
+	font-size: 20px;
+}
+body {
+	background-color: #ccc;
+	padding: 50px;
+	text-align: center;
+}
+
+/* Wrapper */
+.icon-button {
+	background-color: white;
+	border-radius: 3.6rem;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 2.0rem;
+	height: 3.6rem;
+	line-height: 3.6rem;
+	margin: 0 5px;
+	position: relative;
+	text-align: center;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	width: 3.0rem;
+  padding-top: 3%
+}
+
+/* Circle */
+.icon-button span {
+	border-radius: 0;
+	display: block;
+	height: 0;
+	left: 50%;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+	width: 0;
+}
+.icon-button:hover span {
+	width: 3.6rem;
+	height: 3.6rem;
+	border-radius: 3.6rem;
+	margin: -1.8rem;
+}
+.facebook span {
+	background-color: #4099ff;
+}
+.twitter span {
+	background-color: #3B5998;
+}
+.googleplus span {
+	background-color: #db5a3c;
+}
+
+/* Icons */
+.icon-button i {
+	background: none;
+	color: white;
+	height: 3.6rem;
+	left: 0;
+	line-height: 3.6rem;
+	position: absolute;
+	top: 0;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+	width: 3.6rem;
+	z-index: 10;
+}
+.icon-button .ion-social-facebook {
+	color: #4099ff;
+}
+.icon-button .ion-social-twitter {
+	color: #3B5998;
+}
+.icon-button .ion-social-googleplus {
+	color: #db5a3c;
+}
+.icon-button:hover .ion-social-facebook,
+.icon-button:hover .ion-social-twitter,
+.icon-button:hover .ion-social-googleplus {
+	color: white;
+}
+
+
+footer{
+  height: 350px;
+  width: 700;
+  background-color: #081926;
+  margin-left: -100px;
+  margin-right: -100px;
+
+}
+
+.logo{
+  padding-left:80%;
+}
+hr{
+  color: aqua;
+}
+
+#text1{
+  font-size: 20;
+  font-family: 'Droid Sans', sans-serif;
+  color: whitesmoke;
+
+}
+
+#text2{
+  font-size: 20;
+  font-family: 'Droid Sans', sans-serif;
+  color: whitesmoke;
+
+}
+
+.footer-copyright{
+  padding-top: 3%;
+}
+=======
 #event-statements{
 	text-align: center;
 	font-weight: bold;
@@ -146,3 +399,4 @@ hr{
 }
 
 
+>>>>>>> jo
