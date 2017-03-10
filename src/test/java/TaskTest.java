@@ -83,8 +83,8 @@ public class TaskTest {
     public void update_updatesName_true() {
       Task task = new Task("name", "location", "description");
       task.save();
-      task.update("noni");
-      assertEquals("noni", Task.find(task.getId()).getName());
+      task.update("going to town");
+      assertEquals("going to town", Task.find(task.getId()).getDescription());
     }
 
     @Test

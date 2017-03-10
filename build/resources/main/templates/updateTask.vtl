@@ -1,0 +1,66 @@
+
+
+
+   
+    <ul>
+        <td><a href="/tasks/$task.getId() ">$task.getName() </a></td></br>
+        <td>$task.getLocation()</td></br>
+        <td>$task.getDescription()</td></br>
+        <td>$task.getCurrent()</td></br>
+       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >update</button>
+        <hr>
+
+        <!-- <button type="submit">Update</button><hr> -->
+    </ul>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+          </div>
+          <div class="modal-body">
+            <form action="/tasks/$task.getId()" method="post">
+                        <div class="form-group">
+                        <div>
+                           <label for="name">Name</label>
+                           <input type="text" name="name" 
+                            placeholder="Enter the name of the event" 
+                            class="form-control">
+                        </div>  
+
+                        <div>
+                            <label for="description">Event Description</label>
+              
+                           <input type="text" name="description" 
+                           placeholder="Description of the task" 
+                           class="form-control">
+                        </div> 
+
+                        <div>
+                           <label for="location">location</label>
+                           <input type="text" name="location" 
+                           placeholder="Where your task will happen" 
+                           class="form-control">
+                        </div> 
+                
+                          <br>
+
+                        <div>
+                           <button type="submit" 
+                           class="btn btn-default">Done</button>
+                        </div>
+                        </div>
+
+                    </form>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+   
+
+
+
+
+  

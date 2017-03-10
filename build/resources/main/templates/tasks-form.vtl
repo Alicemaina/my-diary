@@ -1,88 +1,87 @@
 <div class="bigBox">
-
 <p id="create-event"><strong>Create your Event</strong></p>
-
    <div class="col-md-6">
+     <div class="box"> 
+        <form action="/tasks" method="post">
+            <div class="form-group">
+            <div>
+               <label for="name">Name</label>
+            </div>
 
-   <div class="box"> 
-    <div class="form-group">    
-      <form action="/tasks" method="post">
+            <div>
+                <input type="text" name="name" 
+                placeholder="Enter the name of the event" 
+                class="form-control">
+            </div>     
 
-        <div>
-            <label for="name">Name</label>
-        </div>
+            <div>
+                <label for="description">Event Description</label>
+            </div>
 
-        <div>
-            <input type="text" name="name" 
-            placeholder="Enter the name of the event" 
-            class="form-control">
-        </div>     
+            <div>
+               <input type="text" name="description" 
+               placeholder="Description of the task" 
+               class="form-control">
+            </div> 
 
-        <div>
-            <label for="description">Event Description</label>
-        </div>
+            <div>
+               <label for="location">location</label>
+            </div>
 
-        <div>
-            <input type="text" name="description" 
-            placeholder="Description of the task" 
-            class="form-control">
-        </div> 
-
-        <div>
-            <label for="location">location/label>
-        </div>
-
-        <div>
-            <input type="text" name="location" 
-            placeholder="Where your task will happen" 
-            class="form-control">
-        </div> 
-
-
+            <div>
+               <input type="text" name="location" 
+               placeholder="Where your task will happen" 
+               class="form-control">
+            </div> 
     
-    <br>
+              <br>
 
-        <div>
-            <button type="submit" 
-            class="btn btn-default">Done</button>
-        </div>
-    </form>
-    </div>
-  </div>
+            <div>
+               <button type="submit" 
+               class="btn btn-default">Done</button>
+            </div>
+            </div>
+
+        </form>
+   
+     </div>
   </div>
 
-  
-  
 
     <div class="col-md-6">
-    <div class="box">
-      <p id="event-statements">You created this Event on (getDate)</p>
+       <div class="box">
+         <p id="event-statements">You created this Event on (getDate)</p>
 
-     <!--  <table class="table" >
-        <thead>
-            <tr>
-                <th>Event</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody> -->
+           <div class="form-group">
+
             #foreach($task in $tasks)
                 <tr>
                 <ul>
-                    <td><h3>Events</h3>$task.getName()</td></br>
-                    <td><h3>Description</h3>$task.getLocation()</td></br>
+                    <td>$task.getName()</td></br>
+                    <td>$task.getLocation()</td></br>
                     <td>$task.getDescription()</td></br>
                     <td>$task.getCurrent()</td></br>
-                    <button type="submit">Update</button><hr>
-                </ul>
+                    <a href="/tasks/$task.getId()" class="btn-link">Update</a>
+                    
+                    <hr>
+                    <form action="/tasks/$task.getId()/delete" method="post">
+                    <button type="submit">Delete</button>
 
-                </tr>
+                    <!-- <button type="submit">Update</button><hr> -->
+                </ul>
+            </tr>
+               
             #end
+</div></div></div></div>
+            
+                
+            
+           
         <!-- </tbody>
-      </table> -->
+      </table>
       
      </div>
     </div>
 
 
-</div>
+</div>s

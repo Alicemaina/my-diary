@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TaskTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2017-03-09T16:25:49" hostname="alice-HP-EliteBook-8460p" time="0.488">
+<testsuite name="TaskTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2017-03-10T07:01:07" hostname="alice-HP-EliteBook-8460p" time="0.857">
   <properties/>
-  <testcase name="equals_returnsTrueIfAllReturn_true" classname="TaskTest" time="0.145"/>
+  <testcase name="equals_returnsTrueIfAllReturn_true" classname="TaskTest" time="0.361"/>
   <testcase name="getLocation_instantiatesWithName_location" classname="TaskTest" time="0.009"/>
-  <testcase name="save_recordsTimeOfCreationInDatabase" classname="TaskTest" time="0.087"/>
-  <testcase name="getName_instantiatesWithName_name" classname="TaskTest" time="0.007"/>
-  <testcase name="update_updatesName_true" classname="TaskTest" time="0.045"/>
-  <testcase name="save_insertsObjectToDB_Task" classname="TaskTest" time="0.028"/>
-  <testcase name="delete_deletesName_true" classname="TaskTest" time="0.04"/>
-  <testcase name="save_assignsId" classname="TaskTest" time="0.034"/>
-  <testcase name="find_returnsTaskWithSameId_secondTask" classname="TaskTest" time="0.034"/>
+  <testcase name="save_recordsTimeOfCreationInDatabase" classname="TaskTest" time="0.238"/>
+  <testcase name="getName_instantiatesWithName_name" classname="TaskTest" time="0.009"/>
+  <testcase name="update_updatesName_true" classname="TaskTest" time="0.048"/>
+  <testcase name="save_insertsObjectToDB_Task" classname="TaskTest" time="0.033"/>
+  <testcase name="delete_deletesName_true" classname="TaskTest" time="0.039"/>
+  <testcase name="save_assignsId" classname="TaskTest" time="0.027"/>
+  <testcase name="find_returnsTaskWithSameId_secondTask" classname="TaskTest" time="0.04"/>
   <testcase name="Task_instantiatesCorrectly_true" classname="TaskTest" time="0.004"/>
-  <testcase name="all_returnsAllInstances" classname="TaskTest" time="0.045"/>
-  <testcase name="getDescription_instantiatesWithName_description" classname="TaskTest" time="0.003"/>
+  <testcase name="all_returnsAllInstances" classname="TaskTest" time="0.037"/>
+  <testcase name="getDescription_instantiatesWithName_description" classname="TaskTest" time="0.006"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
